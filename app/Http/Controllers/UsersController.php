@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
 
 class UsersController extends Controller
 {
@@ -17,7 +19,7 @@ class UsersController extends Controller
         return response()->json(['error' => 'Unauthorized'], 401, []);
     }
 
-    function createUSer(Request $request) {
+    function createUser(Request $request) {
         if($request->isJson()){
             $data = $request->json()->all();
 

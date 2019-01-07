@@ -21,3 +21,4 @@ $router->get('/key', function() {
 });
 
 $router->get('/users', ['uses' => 'UsersController@index']);
+$router->post('/users', ['uses' => 'UsersController@createUser']);
